@@ -3,6 +3,9 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
+os.environ['TCL_LIBRARY'] = 'C:/Users/fla10/AppData/Local/Programs/Python/Python313/tcl/tcl8.6'
+os.environ['TK_LIBRARY'] = 'C:/Users/fla10/AppData/Local/Programs/Python/Python313/tcl/tk8.6'
+
 # This section is responsible for graphing the methods.
 # It is made possible with matplotlib.
 
@@ -20,7 +23,6 @@ def plot_graphical():
     y = f(x)
 
     # Plot the graph.
-    plt.gcf().canvas.manager.set_window_title("Graphical Method | Function Plot")
     plt.figure(figsize=(8, 6))
     plt.plot(x, y, label=r'$f(x) = -2x^6 - 1.5x^4 + 10x + 2$', color='purple')
 
@@ -166,6 +168,7 @@ def plot_function_and_secant(x_vals, f_vals, xi_plus_1):
     plt.axhline(0, color="black", linestyle="--", linewidth=0.5)  
     
     # Adds titles, labels, legends, and window title.
+    plt.gcf().canvas.manager.set_window_title("Secant Method | Function Plot")
     plt.xlabel("x")
     plt.ylabel("f(x)")
     plt.title("Secant Method: Root Finding")

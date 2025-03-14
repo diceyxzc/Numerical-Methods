@@ -176,7 +176,7 @@ def regula_falsi(xl, xu):
     return xr, xl_values, xu_values, xr_values
 
 # Simple Fixed Point Method
-def simple_fix_point(xi, tol=0.5, max_iter=100):
+def simple_fix_point(xi, tol=2.0, max_iter=100):
     
     # Initializes the variables of the method.
     xi = xi
@@ -213,7 +213,7 @@ def simple_fix_point(xi, tol=0.5, max_iter=100):
     return iterations
 
 # Newton Rhapson Method
-def newton_rhapson(xi, tol=0.5, max_iter=100):
+def newton_rhapson(xi, tol=2.0, max_iter=100):
     
     # Initializes the variables of the method.
     xi = xi
